@@ -1,0 +1,2 @@
+class Ipsum < ApplicationRecord
+end
