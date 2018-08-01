@@ -1,15 +1,9 @@
-<%= form_with model: @ipsum, local: true do |form| %>
+<%= form_with url: generate_path, local: true do |f| %>
   <p>
-    <%= form.label :fabricfyme! %><br>
-    <%= form.select @ipsum, (1..5) %>
+    <%= f.select 'num', (1..5) %>
   </p>
 
   <p>
-  <%= form.submit 'Submit' %>
+    <%= f.submit 'Submit', data: { disable_with: false } %>
   </p>
-
-  <p>
-    <%= form.text_area :text %>
-  </p>
-
 <% end %>

@@ -1,2 +1,3 @@
 class Ipsum < ApplicationRecord
+
 end
