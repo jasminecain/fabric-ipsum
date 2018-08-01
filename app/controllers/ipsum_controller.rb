@@ -26,10 +26,14 @@ class IpsumController < ApplicationController
 
   private
   def get_words
-    binding.pry
-      # multiply number of paragraphs by words
-      # sum randomize between 8-12 words by muliplier of input
+    wordArr = [] # wordArr = from seed file
+    randomwords = wordArr.sample(12)
+    paragraphnum = 5 # change num to input value
+    paragraphnum * randomwords.count
+  end
       # query for sum of words
-      # array of words
+      # @ipsum = Ipsum.all
+
+      # array of words; build sentence
     end
 end
