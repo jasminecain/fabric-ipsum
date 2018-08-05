@@ -1,8 +1,5 @@
 class IpsumController < ApplicationController
   def index
-    # @ipsum = Ipsum.new
-    # @ipsum = Ipsum.all
-    # render json: @ipsum
   end
 
   def show
@@ -14,26 +11,12 @@ class IpsumController < ApplicationController
   end
 
   def generate
-    get_words(num)
-    # if @ipsum.valid?
-    #   render json: @ipsum
-    # else
-    #   render json: @ipsum.errors, status: :unprocessable_entity
-    # end
-    # @ipsum.save
-    # render plain: params[:model].inspect
+    get_words(params[:num])
   end
 
   private
-  def get_words
-    wordArr = [] # wordArr = from seed file
-    randomwords = wordArr.sample(12)
-    paragraphnum = 5 # change num to input value
-    paragraphnum * randomwords.count
+  def get_words(num)
+    random_num = num * rand(8..12)
+    @ipsum = Ipsum.limit(random_num)
   end
-      # query for sum of words
-      # @ipsum = Ipsum.all
-
-      # array of words; build sentence
-    end
 end
