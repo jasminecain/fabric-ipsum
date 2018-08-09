@@ -26,20 +26,27 @@ class IpsumController < ApplicationController
 
   private
   def get_words(num)
-    random_num = num.to_i * rand(8..12).to_i # change num to input value
-    ipsum_arr = Ipsum.limit(random_num).select('word')
+    random_num = rand(8..12).to_i * 5 * num.to_i # change num to input value
+    ipsum_arr = Ipsum.limit(random_num).pluck('word')
+    binding.pry
 
-    words_per_sent = random_num/num.to_i #words per sentence
-    period = "."
-    input = num.to_i
-    input.times do
-      period
-      puts " "
+    words_per_sent = random_num / num.to_i #words per sentence
+    ipsum_arr.slice(55).join(' ')
+
+    # ipsum_arr.each do
+    #   ipsum_arr.slice!(55)
+    # end
+
+    # period = "."
+    # input = num.to_i
+    # input.times do
+    #   period
+    #   puts " "
     end
   end
 
-  # def build_sentences # array of words @ipsum; build sentence
-
+  # def build_sentences(array) # array of words @ipsum; build sentence
+  #   ipsum_arr.join(' ').capitalize << "."
   # end
 
   # def build_paragraph #array of sentences with "."
