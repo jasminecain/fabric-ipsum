@@ -1,8 +1,5 @@
 class IpsumController < ApplicationController
   def index
-    # @ipsum = Ipsum.new
-    # @ipsum = Ipsum.all
-    # render json: @ipsum
   end
 
   def show
@@ -15,41 +12,29 @@ class IpsumController < ApplicationController
 
   def generate
     get_words(params[:num])
-    # if @ipsum.valid?
-    #   render json: @ipsum
-    # else
-    #   render json: @ipsum.errors, status: :unprocessable_entity
-    # end
-    # @ipsum.save
-    # render plain: params[:model].inspect
   end
 
   private
   def get_words(num)
-    random_num = rand(8..12).to_i * 5 * num.to_i # change num to input value
-    ipsum_arr = Ipsum.limit(random_num).pluck('word')
-    binding.pry
+    rand_range = rand(8..12).to_i
+    rand_sentences = rand(4..6).to_i
+    random_num = rand_range * rand_sentences * num.to_i
+    word_arr = Ipsum.limit(random_num).pluck('word')
 
-    words_per_sent = random_num / num.to_i #words per sentence
-    ipsum_arr.slice(55).join(' ')
+    @sentence_arr = []
+    @paragraph_arr = []
 
-    # ipsum_arr.each do
-    #   ipsum_arr.slice!(55)
-    # end
-
-    # period = "."
-    # input = num.to_i
-    # input.times do
-    #   period
-    #   puts " "
+    while word_arr.count > 0
+      @sentence_arr << word_arr.slice!(0, rand(8..12).to_i).join(' ')
     end
+
+    @sentence_arr.map!{|s| s.capitalize << '.'}
+
+    while @sentence_arr.count > 0
+      @paragraph_arr << @sentence_arr.slice!(0, rand(4..6).to_i).join(' ')
+    end
+
+    # @paragraph_arr.map!{|p| p << '\n'}
+    # binding.pry
   end
-
-  # def build_sentences(array) # array of words @ipsum; build sentence
-  #   ipsum_arr.join(' ').capitalize << "."
-  # end
-
-  # def build_paragraph #array of sentences with "."
-
-  # end
 end
