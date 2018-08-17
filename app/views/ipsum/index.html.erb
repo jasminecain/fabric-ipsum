@@ -6,4 +6,8 @@
   <p>
     <%= f.submit 'Submit', data: { disable_with: false } %>
   </p>
+
+  <% @paragraph_arr.each do |paragraph| %>
+    <p><%= paragraph %></p>
+  <% end %>
 <% end %>
