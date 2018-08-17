@@ -1,24 +1,26 @@
-# README
+# Fabric Ipsum
+This project is built with Ruby 2.4.2 and Rails 5.1.6.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description:
+Fabric Ipsum is an app that generates ipsum paragraphs based on words related that are related with fabrics.
 
-Things you may want to cover:
+### Prerequisites
+- Node v6.11.0
+- NPM >= v5.3.0
 
-* Ruby version
+### Spin up
+```bash
+rake db:create db:migrate db:seed
+```
 
-* System dependencies
+### Staging
+You'll need a server to run Fabric Ipsum in your browser, if you don't have one installed, [http-server](https://www.npmjs.com/package/http-server) is a quick option.
 
-* Configuration
+```bash
+npm install --save http-server
+```
+Then open a new terminal tab and run:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+rails s
+```
