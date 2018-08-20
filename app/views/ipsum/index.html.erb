@@ -1,10 +1,14 @@
+<%= image_tag('fabricipsum.png', style:"height: 125px; width: 125px") %>
+
+<h1>Fabric Ipsum</h1>
+
 <%= form_with url: generate_path, local: true do |f| %>
   <p>
-    <%= f.select 'num', (1..5) %>
+    I want <%= f.select 'num', (1..5) %> paragraphs of fabric placeholder text.
   </p>
 
   <p>
-    <%= f.submit 'Submit', data: { disable_with: false } %>
+    <%= f.submit 'Fabricfy!', data: { disable_with: false } %>
   </p>
 
   <% @paragraph_arr.each do |paragraph| %>

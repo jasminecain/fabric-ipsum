@@ -2,7 +2,7 @@
 This project is built with Ruby 2.4.2 and Rails 5.1.6.
 
 ### Description:
-Fabric Ipsum is an app that generates ipsum paragraphs based on words related that are related with fabrics.
+Fabric Ipsum is an app that generates ipsum paragraphs based on words from a fabric dictionary.
 
 ### Prerequisites
 - Node v6.11.0
