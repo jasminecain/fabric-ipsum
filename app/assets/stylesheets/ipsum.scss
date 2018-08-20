@@ -1,3 +1,16 @@
 // Place all the styles related to the Ipsum controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.intro-wrapper {
+  display: flex;
+
+  .left-half,
+  .right-half {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 1 rem;
+  }
+}

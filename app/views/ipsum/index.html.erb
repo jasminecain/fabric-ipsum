@@ -2,6 +2,16 @@
 
 <h1>Fabric Ipsum</h1>
 
+<section class="intro-wrapper">
+  <div class="left-half">
+    <p>If you are looking for fabric auto-generated text to fill up your web pages, you've come to the perfect place. Who wants a boring ipsum? Not me! So, let's add some character to all the things with fabric!<p>
+  </div>
+
+  <div class="right-half">
+    <p>Fabric Ipsum is a fabric word generator, covering all words that are fabric related.</p>
+  </div>
+</section>
+
 <%= form_with url: generate_path, local: true do |f| %>
   <p>
     I want <%= f.select 'num', (1..5) %> paragraphs of fabric placeholder text.
