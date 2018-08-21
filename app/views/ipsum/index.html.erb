@@ -20,16 +20,16 @@
   <p class="submit-btn">
     <%= f.submit 'Fabricfy!', data: { disable_with: false } %>
   </p>
-
-  <textarea class="paragraph-arr" id="bar">
-    <% @paragraph_arr.each do |paragraph| %>
-      <%= paragraph %>
-    <% end %>
-  </textarea>
-
-  <button class="clipboard-btn"
-          data-clipboard-action="copy"
-          data-clipboard-target="#bar">
-    Copy
-  </button>
 <% end %>
+
+<textarea class="paragraph-arr" id="bar">
+  <% @paragraph_arr.each do |paragraph| %>
+    <%= paragraph %>
+  <% end %>
+</textarea>
+
+<button class="clipboard-btn"
+        data-clipboard-action="copy"
+        data-clipboard-target="#bar">
+  Copy
+</button>
