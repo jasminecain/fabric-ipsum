@@ -9,7 +9,7 @@ class IpsumController < ApplicationController
     paragraphs = get_paragraphs(sentences)
 
     if paragraphs.present?
-      render :index
+      render action: "index"
     end
   end
 

@@ -1,17 +1,35 @@
-<%= image_tag('fabricipsum.png', style:"height: 125px; width: 125px") %>
+<%= image_tag('fabricipsum.png', :class => "logo") %>
 
-<h1>Fabric Ipsum</h1>
+<h1 class="logo-text">Fabric Ipsum</h1>
+
+<section class="intro-wrapper">
+  <div class="left-half">
+    <p>If you are looking for fabric auto-generated text to fill up your web pages, you've come to the perfect place. Who wants a boring ipsum? Not me! So, let's add some character to all the things with fabric!<p>
+  </div>
+
+  <div class="right-half">
+    <p>Fabric Ipsum is a fabric word generator, covering all words that are fabric related.</p>
+  </div>
+</section>
 
 <%= form_with url: generate_path, local: true do |f| %>
-  <p>
+  <p class="selector">
     I want <%= f.select 'num', (1..5) %> paragraphs of fabric placeholder text.
   </p>
 
-  <p>
+  <p class="submit-btn">
     <%= f.submit 'Fabricfy!', data: { disable_with: false } %>
   </p>
-
-  <% @paragraph_arr.each do |paragraph| %>
-    <p><%= paragraph %></p>
-  <% end %>
 <% end %>
+
+<textarea class="paragraph-arr" id="bar">
+  <% @paragraph_arr.each do |paragraph| %>
+    <%= paragraph %>
+  <% end %>
+</textarea>
+
+<button class="clipboard-btn"
+        data-clipboard-action="copy"
+        data-clipboard-target="#bar">
+  Copy
+</button>

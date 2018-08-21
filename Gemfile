@@ -33,6 +33,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Integration of copy text to clipboard
+gem 'clipboard-rails'
+
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry', platforms: [:mri, :mingw, :x64_mingw]
