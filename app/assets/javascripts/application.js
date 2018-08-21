@@ -14,12 +14,11 @@
 //= require turbolinks
 //= require_tree .
 //= require clipboard
+//= require_tree .
 //= require jquery
 //= require jquery_ujs
 
 $(function () {
-
   var clipboard = new Clipboard('.clipboard-btn');
   console.log(clipboard);
-
 });
