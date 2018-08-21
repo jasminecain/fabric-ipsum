@@ -2,15 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.logo {
+  display: block;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 125px;
+}
+
 .intro-wrapper {
   display: flex;
 
   .left-half,
   .right-half {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
-    flex: 1;
     padding: 1 rem;
+    text-align: center;
   }
+}
+
+.logo-text,
+.selector,
+.submit-btn,
+.paragraph-arr {
+  text-align: center;
 }
