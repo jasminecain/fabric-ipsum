@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :homes, only: [:show]
+  # root to: "homes#show"
+  # get 'homes/show'
+
   post '/generate' => 'ipsum#generate'
 
   root 'ipsum#index'

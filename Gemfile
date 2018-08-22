@@ -38,6 +38,9 @@ gem 'clipboard-rails'
 
 gem 'jquery-rails'
 
+# Social sharing icons
+gem 'social-share-button'
+
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry', platforms: [:mri, :mingw, :x64_mingw]
