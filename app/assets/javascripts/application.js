@@ -17,6 +17,7 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require social-share-button
 
 $(function () {
   var clipboard = new Clipboard('.clipboard-btn');
