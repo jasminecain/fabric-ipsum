@@ -15,6 +15,13 @@
  *= require_self
  */
 
-<h1>Hello World!</h1>
-<%= social_share_button_tag("My Site") %>
-<p>Welcome to my site!</p>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 960px;
+}
