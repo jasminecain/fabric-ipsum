@@ -14,32 +14,73 @@
   width: 125px;
 }
 
+.logo-text {
+  font-family: 'Pacifico', regular;
+  font-size: 40px;
+  text-align: center;
+}
+
+.button {
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+}
+
 .intro-wrapper {
   display: flex;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 15px;
 
   .left-half,
   .right-half {
     display: flex;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 15px;
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0px 14px;
     padding: 1 rem;
     text-align: center;
   }
 }
 
-.logo-text,
-.selector,
-.submit-btn {
+select {
+  cursor: pointer;
+  padding: 6px;
+  margin: 5px;
+  // border: 1px solid #555;
+  width: 4%;
+}
+
+.select-sentence {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 15px;
   text-align: center;
 }
 
-.paragraph-arr {
+.center-text {
+  text-align: center;
+}
+
+.ipsum-wrapper p {
+  font-family: 'Delius Swash Caps', regular;
+  font-size: 16px;
   display: block;
-  height: 200px;
+  // height: 200px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  // width: 1200px;
+}
+
+.button {
+  background-color: royalblue;
+  border: 5px black;
+  border-radius: 9px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  padding: 12px 16px;
+  margin: 10px;
 }
 
 .clipboard-btn {
