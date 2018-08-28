@@ -24,8 +24,10 @@
   <% end %>
 </div>
 
-<button class="button clipboard-btn"
-        data-clipboard-action="copy"
-        data-clipboard-target="#ipsum">
-  Select All Text
-</button>
+<% if @paragraph_arr.present? %>
+  <button class="button clipboard-btn"
+          data-clipboard-action="copy"
+          data-clipboard-target="#ipsum">
+    Select All Text
+  </button>
+<% end %>
