@@ -12,28 +12,33 @@
     <div class="container">
       <%= yield %>
       <%= social_share_button_tag("Fabric Ipsum", :url => "http://mysite.com/foo") %>
-    </div>
 
-    <footer class="footer-wrapper">
-      <div class="footer-copyright">
-        <div class="container divide">
-          <div class="donate">
-            <span class="donate-text">Love Fabric Ipsum?</span>
-            <br>
-            <a href="https://www.paypal.me/JasmineQuach" target="_blank">
-              <button class="donate-btn">
-                Buy me Boba :)
-              </button>
-            </a>
+      <footer class="footer-wrapper">
+        <div class="footer-copyright">
+          <div class="divide">
+            <div class="donate">
+              <div>
+                <span class="donate-text">Love Fabric Ipsum?</span>
+                <a href="https://www.paypal.me/JasmineQuach" target="_blank">
+                  <button class="donate-btn">
+                    Buy me Boba tea :)
+                  </button>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="site-credits">
+              <span>Designed and Developed by Jasmine Cain
+                <a href="https://twitter.com/JasmineQuach" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </span>
+            </div>
+
           </div>
-
-
-          <div class="site-credits">
-            <span>Designed and Developed by Jasmine Cain
-              <a href="https://twitter.com/JasmineQuach" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </span>
+          <div class="footer-center">
+            © 2018 FabricIpsum
             <br>
             <span>Dictionary Credits to
               <a href="http://www.fabricdictionary.com/" target="_blank">
@@ -41,13 +46,9 @@
               </a>
             <span>
           </div>
-
         </div>
-        <div class="footer-center">
-          © 2018 FabricIpsum
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 
 </html>
